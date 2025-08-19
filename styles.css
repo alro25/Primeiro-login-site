@@ -46,7 +46,7 @@
     .input-field {
         width: 100%;
         background-color: transparent;
-        border: 1.5px solid #5713c4;
+        border: 2px solid #5713c4;
         border-radius: 4px;
         font-size: 1rem;
         color: #43198c;
@@ -63,6 +63,15 @@
         color: #43198c;
         transition: all 0.2s ease;
     }
+    
+    .input-field:focus {
+        outline: none; /* Remove a borda de foco padrão do navegador */
+        border-color: blueviolet;
+    }
+
+    .input-field:focus + .input-label {
+    color: blueviolet;
+}
 
     .remember-forgot {
         position: relative;
