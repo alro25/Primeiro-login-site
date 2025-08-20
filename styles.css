@@ -84,13 +84,14 @@
     .botao-cadastrar {
         color: rgb(113, 34, 240);
         font-family: sans-serif;
+        font-size: larger;
         font-weight: 300;
         border:  1.5px solid #5713c4;
         border-style: outset;
         border-radius: 5px;
         border-width: 1.9px;
         border-color: #43198c;
-        padding: 20px;
+        padding: 20px 35px;
         margin-top: 10px;
         background-color: #fff;
         transition: all 0.5s ease;
@@ -106,7 +107,7 @@
         color: rgb(255, 255, 255);
         font-family: sans-serif;
         font-weight: 300;
-        line-height: normal;
+        font-size: larger;
         margin-top: 10px;
         border: none;
         border-radius: 5px;
