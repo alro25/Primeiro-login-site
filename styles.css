@@ -58,7 +58,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 430px;
     color: #43198c;
 }
 
@@ -73,6 +73,7 @@ h1 {
     margin-bottom: 40px;
     color: #43198c;
     text-align: center;
+    margin-block-end: 80px;
 }
 
 .input-container {
@@ -138,7 +139,7 @@ color: blueviolet;
 
 .botoes-container {
     display: flex;
-    gap: 15px;
+    gap: 25px;
     width: 100%;
 }
 
@@ -146,7 +147,7 @@ color: blueviolet;
     flex: 1;
     font-size: 1rem;
     border-radius: 5px;
-    padding: 15px;
+    padding: 25px 65px;
     transition: all 0.3s ease;
     cursor: pointer;
     font-weight: bold;
