@@ -1,219 +1,229 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.carousel {
-    display: none;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.carousel img {
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel img.active {
-    display: block;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #fff;
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
 }
 
 .pagina-login {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .imagem-container {
-    flex: 1;
-    background-image: url('/img/Cidade_Roxa.png');
-    background-size: cover;
-    background-position: center;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 
 .login-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 600px;
-    padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  padding: 40px;
+  flex: 1;
 }
 
 .login-card {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 430px;
-    color: #43198c;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  color: #43198c;
 }
-
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 
 form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #43198c;
-    text-align: center;
-    margin-block-end: 80px;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #43198c;
+  text-align: center;
+  margin-block-end: 80px;
 }
 
 .input-container {
-    position: relative;
-    width: 100%;
-    margin-bottom: 35px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 35px;
 }
 
 .input-field {
-    width: 100%;
-    background-color: transparent;
-    border: 1.5px solid #5713c4;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #43198c;
-    padding: 16px;
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid #5713c4;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #43198c;
+  padding: 16px;
 }
 
 .input-label {
-    position: absolute;
-    left: 12px;
-    top: -10px;
-    background-color: #fff;
-    padding: 0 4px;
-    font-size: 14px;
-    color: #43198c;
-    transition: all 0.2s ease;
+  position: absolute;
+  left: 12px;
+  top: -10px;
+  background-color: #fff;
+  padding: 0 4px;
+  font-size: 14px;
+  color: #43198c;
+  transition: all 0.2s ease;
 }
 
 .input-field:focus {
-    outline: none; /* Remove a borda de foco padrão do navegador */
-    border-color: blueviolet;
+  outline: none;
+  border-color: blueviolet;
 }
 
 .input-field:focus + .input-label {
-color: blueviolet;
+  color: blueviolet;
 }
 
 .options-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 30px;
-    font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
 }
 
 .remember-me {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #43198c;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #43198c;
 }
 
 .forgot-password {
-    color: #43198c;
-    text-decoration: none;
+  color: #43198c;
+  text-decoration: none;
 }
 
 .forgot-password:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .botoes-container {
-    display: flex;
-    gap: 25px;
-    width: 100%;
+  display: flex;
+  gap: 25px;
+  width: 100%;
 }
 
-.botao-cadastrar, .botao-login {
-    flex: 1;
-    font-size: 1rem;
-    border-radius: 5px;
-    padding: 25px 65px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    font-weight: bold;
-    border: 1.5px solid #5713c4;
+.botao-cadastrar,
+.botao-login {
+  flex: 1;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  border: 1.5px solid #5713c4;
 }
 
 .botao-cadastrar {
-    background-color: #43198c;
-    color: #fff;
-    border-color: #43198c;
+  background-color: #43198c;
+  color: #fff;
+  border-color: #43198c;
 }
 
 .botao-login {
-    background-color: #fff;
-    color: #43198c;
-    border-color: #43198c;
+  background-color: #fff;
+  color: #43198c;
+  border-color: #43198c;
 }
 
-.botao-cadastrar:hover, .botao-login:hover {
-    transform: translateY(-2px);
+.botao-cadastrar:hover {
+  transform: translateY(-2px);
+  background-color: #5713c4;
+}
+
+.botao-login:hover {
+  transform: translateY(-2px);
 }
 
 .acesso {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 30px;
-    color: #43198c;
-    font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  color: #43198c;
+  font-size: 0.85rem;
 }
-.acesso::before, .acesso::after {
-    content: '';
-    flex-grow: 1;
-    height: 1px;
-    background-color: #43198c;
-    margin: 0 1em;
+
+.acesso::before,
+.acesso::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: #43198c;
+  margin: 0 1em;
 }
 
 .social-login-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 20px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .social-button {
-    display: flex;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #43198c;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0,.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #43198c;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0, .05);
 }
 
 .social-button:hover {
-    border-color: #43198c;
-    transform: translateY(-2px);
+  border-color: #43198c;
+  transform: translateY(-2px);
 }
 
 .social-button img {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }

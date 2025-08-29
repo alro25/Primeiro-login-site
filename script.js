@@ -1,19 +1,15 @@
-const image1 = require('./img/Cidade_Roxa.png').default
-const image2 = require('./img/Cidade_Futurista.png').default
-const image3 = require('./img/Cidade_Japonesa.png').default
-const image4 = require('./img/Cidade_Moderna_Japonesa.png').default
+document.addEventListener("DOMContentLoaded", () => {
+  const imagens = document.querySelectorAll(".carousel img");
+  let indice = 0;
 
-    const imgs = [
-      image1,
-      image2,
-      image3,
-      image4
-    ]
+  setInterval(() => {
+    // Remove a classe "active" da imagem atual
+    imagens[indice].classList.remove("active");
 
-const element = document.querySelector('.carousel_img img')
-    let index = 0
+    // Vai para a próxima (ou volta ao início)
+    indice = (indice + 1) % imagens.length;
 
-    setInterval(() => {
-      index = (index + 1) % imgs.length;
-      element.src = imgs[index];
-    }, 2000);
+    // Mostra a nova imagem
+    imagens[indice].classList.add("active");
+  }, 4000); // troca a cada 4 segundos
+});
